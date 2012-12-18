@@ -1,21 +1,15 @@
-<h1>Zestawienie miesięczne</h1>
+<h1>Zestawienie miesięczne <%= t("date.month_names")[@date.month] %> <%= @date.year %></h1>
 
 <table>
   <tr>
     <th>Nazwa</th>
     <th>Numer</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @employees.each do |employee| %>
   <tr>
     <td><%= employee.name %></td>
     <td><%= employee.number %></td>
-    <td><%= link_to 'Pokaż', '#' %></td>
-    <td><%= link_to 'Edytuj', '#' %></td>
-    <td><%= link_to 'Usuń', '#' %></td>
   </tr>
 	<tr>
 		<td>
@@ -26,6 +20,7 @@
 			</ol>
 		</td>
 	</tr>
+	<tr><td><%= link_to 'Dodaj', new_assignment_path %></td></tr>
 <% end %>
 </table>
 

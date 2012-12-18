@@ -3,6 +3,11 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
 	def monthly
+		if params[:date] == nil
+			@date = Date.current
+		else
+			@date = params[:date]
+		end
 		@employees = Employee.all
 	end
 
