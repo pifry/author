@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label "Nazwa" %><br />
+    <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label "Numer" %><br />
+    <%= f.label :number %><br />
     <%= f.text_field :number %>
   </div>
   <div class="actions">

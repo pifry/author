@@ -7,9 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<ul class="hmenu">
+	<%= render 'layouts/navmenu' %>
 	<%= render 'layouts/login_items' %>
-
-
+</ul>
 	<%= yield %>
 
 </body>

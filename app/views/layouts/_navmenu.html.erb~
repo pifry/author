@@ -1,7 +1,8 @@
-<ul class="hmenu">
+<div class="menuright">
 	<% if user_signed_in? %>
 		<li><%= link_to "Projekty", projects_path %></li>
-		<li><%= link_to "Pracownicy", user_session_path %></li>
-		<li><%= link_to "Podsumowanie miesięczne", user_session_path %></li>
+		<li><%= link_to "Pracownicy", employees_path %></li>
+		<li><%= link_to "Podsumowanie miesięczne", '#' %></li>
 	<% end %>
-</ul>
+</div>
+
