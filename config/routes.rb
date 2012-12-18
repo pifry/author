@@ -1,11 +1,10 @@
 Author::Application.routes.draw do
-  resources :projects
-
-
+  resources :assignments
 	root :to => 'static_pages#welcome' 
  	devise_for :users
   resources :employees
   resources :projects
+	match '/monthly', to: 'employees#monthly'
 	match '/welcome', to: 'static_pages#welcome'
 	
 

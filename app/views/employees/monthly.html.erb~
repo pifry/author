@@ -1,0 +1,32 @@
+<h1>Zestawienie miesięczne</h1>
+
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <th>Numer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @employees.each do |employee| %>
+  <tr>
+    <td><%= employee.name %></td>
+    <td><%= employee.assignments %></td>
+    <td><%= link_to 'Pokaż', '#' %></td>
+    <td><%= link_to 'Edytuj', '#' %></td>
+    <td><%= link_to 'Usuń', '#' %></td>
+  </tr>
+	<tr>
+		<td>
+			<ol>
+				<% employee.assignments.each do |asgn| %>
+					<li><%= asgn.date %></li>
+				<% end %>
+			</ol>
+		</td>
+	</tr>
+<% end %>
+</table>
+
+<br />
