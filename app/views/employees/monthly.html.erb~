@@ -20,8 +20,7 @@
 			</ol>
 		</td>
 	</tr>
-	<tr><td><%= link_to 'Dodaj', new_assignment_path %></td></tr>
+	<tr><td><%= link_to 'Dodaj', new_assignment_path(:employee_id => "3") %></td></tr>
 <% end %>
 </table>
-
 <br />

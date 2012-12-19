@@ -25,7 +25,8 @@ class AssignmentsController < ApplicationController
   # GET /assignments/new.json
   def new
     @assignment = Assignment.new
-
+		@assignment.employee_id = params[:employee_id]
+		puts params[:employee_id]
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @assignment }

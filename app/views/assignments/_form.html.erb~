@@ -16,6 +16,7 @@
     <%= f.datetime_select :date %>
   </div>
 	<div class="field">
+    <%= f.label :employee_id %><br />
     <%= f.hidden_field :employee_id %>
   </div>
   <div class="actions">

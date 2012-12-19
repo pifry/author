@@ -11,7 +11,8 @@
 	<%= render 'layouts/navmenu' %>
 	<%= render 'layouts/login_items' %>
 </ul>
+<p>
 	<%= yield %>
-
+</p>
 </body>
 </html>
