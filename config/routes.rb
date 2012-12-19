@@ -1,4 +1,7 @@
 Author::Application.routes.draw do
+  resources :departments
+
+
   resources :assignments
 	root :to => 'static_pages#welcome' 
  	devise_for :users

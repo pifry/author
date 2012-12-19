@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121219100229) do
+ActiveRecord::Schema.define(:version => 20121219135255) do
 
   create_table "assignments", :force => true do |t|
     t.datetime "date"
@@ -22,11 +22,18 @@ ActiveRecord::Schema.define(:version => 20121219100229) do
     t.integer  "ManHour"
   end
 
+  create_table "departments", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "employees", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "name"
     t.string   "number"
+    t.string   "department"
   end
 
   create_table "projects", :force => true do |t|
@@ -49,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20121219100229) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.integer  "department_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

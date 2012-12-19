@@ -1,5 +1,7 @@
-<h1>Zestawienie miesięczne <%= t("date.month_names")[@date.month] %> <%= @date.year %></h1>
-
+<h1>Zestawienie miesięczne 
+<%= date_select "dane", "data", :discard_day => true, :onchange => "this.form.submit();" %>
+</h1>
+<h1>Dział: </h1>
 <table border='0' class="outertable">
   <tr>
     <th>Nazwa</th>

@@ -9,6 +9,7 @@ class EmployeesController < ApplicationController
 			@date = params[:date]
 		end
 		@employees = Employee.all
+		@monthly = Monthly.new(:date => Date.current, :department => "TKE-13")
 	end
 
   def index

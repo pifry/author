@@ -1,5 +1,7 @@
-<h1>Zestawienie miesięczne <%= t("date.month_names")[@date.month] %> <%= @date.year %></h1>
-
+<h1>Zestawienie miesięczne 
+<%= date_select "dane", "data", :discard_day => true %>
+</h1>
+<h1>Dział: </h1>
 <table border='0' class="outertable">
   <tr>
     <th>Nazwa</th>
@@ -12,7 +14,7 @@
     <td><%= employee.name %></td>
     <td><%= employee.number %></td>
 <td>
-			<table border='0' class="altable">
+			<table border='0' class="innertable">
   			<tr>
     			<th>Nazwa</th>
     			<th>Pracochłonność</th>
