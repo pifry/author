@@ -11,6 +11,25 @@
  *= require_self
  *= require_tree .
  */
+table.outertable {
+	border-collapse: collapse;
+}
+
+table.outertable, td, th {
+	border: 1px solid black;
+	text-align: left;
+	vertical-align: top;
+}
+
+table.innertable {
+	border-collapse: collapse;
+}
+
+table.innertable, td, th {
+	border: 0px;
+	text-align: left;
+	vertical-align: top;
+}
 
 ul.hmenu {
 	list-style: none;	
@@ -21,7 +40,7 @@ ul.hmenu {
 
 ul.hmenu li {
 	display: inline;
-	float: center;
+	float: left;
 }
 
 ul.hmenu li a{
