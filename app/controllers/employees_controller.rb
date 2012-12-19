@@ -4,7 +4,7 @@ class EmployeesController < ApplicationController
   # GET /employees.json
 	def monthly
 		if params[:date] == nil
-			@date = Date.current
+			@date = Date.current.beginning_of_month
 		else
 			@date = params[:date]
 		end

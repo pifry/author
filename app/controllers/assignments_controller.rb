@@ -42,6 +42,7 @@ class AssignmentsController < ApplicationController
   # POST /assignments.json
   def create
     @assignment = Assignment.new(params[:assignment])
+		@assignment.date = @assignment.date.beginning_of_month
 
     respond_to do |format|
       if @assignment.save

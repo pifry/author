@@ -1,25 +1,33 @@
 <h1>Zestawienie miesięczne <%= t("date.month_names")[@date.month] %> <%= @date.year %></h1>
 
-<table>
+<table border='1'>
   <tr>
     <th>Nazwa</th>
     <th>Numer</th>
+    <th>Zadania</th>
   </tr>
 
 <% @employees.each do |employee| %>
   <tr>
     <td><%= employee.name %></td>
     <td><%= employee.number %></td>
-  </tr>
-	<tr>
-		<td>
-			<ol>
-				<% employee.assignments.each do |asgn| %>
-					<li><%= asgn.date %></li>
-				<% end %>
-			</ol>
+<td>
+			<table border='1'>
+  			<tr>
+    			<th>Nazwa</th>
+    			<th>Pracochłonność</th>
+					<th></th>
+  			</tr>
+					<% employee.assignments.find(:all, :conditions => ["DATE(date) = ?", @date.beginning_of_month]).each do |asgn| %>
+						<tr>
+							<th><%= Project.find(asgn.project_id).name %></th>
+							<th><%= asgn.ManHour %></th>
+							<th><%= link_to 'Zmień', edit_assignment_path(asgn, :employee_id => employee.id) %></th>
+						</tr>
+					<% end %>
+			</table>
 		</td>
-	</tr>
+  </tr>
 	<tr><td><%= link_to 'Dodaj', new_assignment_path(:employee_id => employee.id) %></td></tr>
 <% end %>
 </table>
