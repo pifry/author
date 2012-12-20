@@ -23,17 +23,24 @@
     			<th>Pracochłonność</th>
 					<th></th>
   			</tr>
-					<% employee.assignments.find(:all, :conditions => ["DATE(date) = ?", @mydate]).each do |asgn| %>
-						<tr>
-							<th><%= Project.find(asgn.project_id).name %></th>
-							<th><%= asgn.ManHour %></th>
-							<th><%= link_to 'Zmień', edit_assignment_path(asgn, :employee_id => employee.id) %></th>
-						</tr>
-					<% end %>
+				<% @suma = 0 %>
+				<% employee.assignments.find(:all, :conditions => ["DATE(date) = ?", @mydate]).each do |asgn| %>
+				<tr>
+					<th><%= Project.find(asgn.project_id).name %></th>
+					<th><%= asgn.ManHour %></th>
+					<th><%= link_to 'Zmień', edit_assignment_path(asgn, :employee_id => employee.id) %></th>
+				</tr>
+				<% @suma += asgn.ManHour.to_i %>
+				<% end %>
+				<tr>
+					<th></th>
+					<th><%= @suma %></th>
+					<th></th>
+				</tr>
 			</table>
 		</td>
   </tr>
-	<tr><td><%= link_to 'Dodaj', new_assignment_path(:employee_id => employee.id) %></td></tr>
+	<tr><th></th><th></th><th><%= link_to 'dodaj zadanie', new_assignment_path(:employee_id => employee.id) %></th></tr>
 <% end %>
 </table>
 <br />
