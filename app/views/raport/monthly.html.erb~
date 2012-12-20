@@ -5,8 +5,6 @@
 </form>
 
 <h1>Dział: <%= Department.find(current_user.department_id).name %></h1>
-
-
 <table border="1" class="outertable">
 	<tr>
 		<th>nazwa</th>
@@ -17,8 +15,8 @@
 <% @employees.each do |employee| %>
 <% @asgnmts = employee.assignments.find(:all, :conditions => ["DATE(date) = ?", @mydate]) %>
 	<tr>
-		<%= content_tag :th, employee.name, :rowspan => @asgnmts.count+2 %>
-		<%= content_tag :th, employee.number, :rowspan => @asgnmts.count+2 %>
+		<%= content_tag :th, employee.name, :rowspan => @asgnmts.count+3 %>
+		<%= content_tag :th, employee.number, :rowspan => @asgnmts.count+3 %>
 		<th>nazwa</th>
 		<th>pracochłonność</th>
 		<th></th>
@@ -30,77 +28,21 @@
 		<td><%= asgn.ManHour %></th>
 		<td><%= link_to 'Zmień', edit_assignment_path(asgn, :employee_id => employee.id) %></th>
 	</tr>
+<% @EmployeeSum += asgn.ManHour.to_i %>
 <% end %>
 	<tr>
 		<th>Suma:</th>
-		<th>0</th>
+		<th><%= @EmployeeSum %></th>
 		<th></th>
 	</tr>
-<% end %>
 	<tr>
-		<th colspan="4"></th>
-		<th><%= @DepartmentSum %></th>
+		<th colspan="3"><%= link_to 'dodaj zadanie', new_assignment_path(:employee_id => employee.id) %></th>
 	</tr>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table border='0' class="outertable">
-  <tr>
-    <th>Nazwa <%= @zmienna %><%= @User %></th>
-    <th>Numer</th>
-    <th>Zadania</th>
-  </tr>
-<% @DepartmentSum = 0 %>
-<% @employees.each do |employee| %>
-  <tr>
-    <td><%= employee.name %></td>
-    <td><%= employee.number %></td>
-<td>
-			<table border='0' class="innertable" width=100%>
-  			<tr>
-    			<th>Nazwa</th>
-    			<th>Pracochłonność</th>
-					<th></th>
-  			</tr>
-				<% @EmployeeSum = 0 %>
-				<% employee.assignments.find(:all, :conditions => ["DATE(date) = ?", @mydate]).each do |asgn| %>
-				<tr>
-					<th><%= Project.find(asgn.project_id).name %></th>
-					<th><%= asgn.ManHour %></th>
-					<th><%= link_to 'Zmień', edit_assignment_path(asgn, :employee_id => employee.id) %></th>
-				</tr>
-				<% @EmployeeSum += asgn.ManHour.to_i %>
-				<% end %>
-				<tr>
-					<th></th>
-					<th><%= @EmployeeSum %></th>
-					<th></th>
-				</tr>
-			</table>
-		</td>
-  </tr>
-	<tr><th></th><th></th><th><%= link_to 'dodaj zadanie', new_assignment_path(:employee_id => employee.id) %></th></tr>
 <% @DepartmentSum += @EmployeeSum %>
 <% end %>
-<tr>
-	<th></th>
-	<th></th>
-	<th><%= @DepartmentSum %></th>
-</tr>
+	<tr>
+		<th colspan="2"></th>
+		<th colspan="3"><%= @DepartmentSum %></th>
+	</tr>
 </table>
 <br />
