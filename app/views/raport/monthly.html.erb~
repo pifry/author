@@ -1,10 +1,13 @@
+<form name='dateform' action='monthly'>
 <h1>Zestawienie miesięczne 
-<%= date_select "dane", "data", :discard_day => true, :onchange => "this.form.submit();" %>
+<%= select_date Date.current, {:discard_day => true }, :onchange => "this.form.submit()" %>
 </h1>
+</form>
+
 <h1>Dział: <%= Department.find(current_user.department_id).name %></h1>
 <table border='0' class="outertable">
   <tr>
-    <th>Nazwa</th>
+    <th>Nazwa <%= @zmienna %><%= @User %></th>
     <th>Numer</th>
     <th>Zadania</th>
   </tr>
@@ -20,7 +23,7 @@
     			<th>Pracochłonność</th>
 					<th></th>
   			</tr>
-					<% employee.assignments.find(:all, :conditions => ["DATE(date) = ?", @date.beginning_of_month]).each do |asgn| %>
+					<% employee.assignments.find(:all, :conditions => ["DATE(date) = ?", @mydate]).each do |asgn| %>
 						<tr>
 							<th><%= Project.find(asgn.project_id).name %></th>
 							<th><%= asgn.ManHour %></th>

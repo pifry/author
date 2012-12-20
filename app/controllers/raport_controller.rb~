@@ -1,0 +1,6 @@
+class RaportController < ApplicationController
+  def monthly
+		@mydate = Date.new(@date[:year].to_i, @date[:month].to_i, @date[:day].to_i).beginning_of_month
+		@employees = Employee.all 
+  end
+end

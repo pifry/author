@@ -1,7 +1,7 @@
 <h1>Zestawienie miesięczne 
-<%= date_select "dane", "data", :discard_day => true %>
+<%= date_select "dane", "data", :discard_day => true, :onchange => "this.form.submit();" %>
 </h1>
-<h1>Dział: </h1>
+<h1>Dział: <%= current_user.department_id%></h1>
 <table border='0' class="outertable">
   <tr>
     <th>Nazwa</th>

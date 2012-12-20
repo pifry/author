@@ -1,4 +1,6 @@
 Author::Application.routes.draw do
+  get "raport/monthly"
+
   resources :departments
 
 
