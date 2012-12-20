@@ -1,0 +1,19 @@
+<table border="1">
+	<tr>
+		<th>A</th>
+		<th>B</th>
+		<th colspan="3"">C</th>
+	</tr>
+	<tr>
+		<th rowspan="2"></th>
+		<th rowspan="2"></th>
+		<th>C</th>
+		<th>D</th>
+		<th>E</th>
+	</tr>
+	<tr>
+		<th>C</th>
+		<th>D</th>
+		<th>E</th>
+	</tr>
+</table>
