@@ -5,6 +5,6 @@ class RaportController < ApplicationController
 		else
 			@mydate = Date.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i).beginning_of_month
 		end
-		@employees = Employee.all 
+		@employees = Employee.where("department_id = ?", current_user.department_id)
   end
 end

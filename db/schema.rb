@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121220102719) do
+ActiveRecord::Schema.define(:version => 20130114090627) do
 
   create_table "assignments", :force => true do |t|
     t.datetime "date"
@@ -29,11 +29,11 @@ ActiveRecord::Schema.define(:version => 20121220102719) do
   end
 
   create_table "employees", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.string   "name"
     t.string   "number"
-    t.string   "department"
+    t.integer  "department_id"
   end
 
   create_table "projects", :force => true do |t|
