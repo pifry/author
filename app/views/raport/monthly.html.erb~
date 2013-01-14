@@ -4,7 +4,12 @@
 </h1>
 </form>
 
-<h1>Dział: <%= Department.find(current_user.department_id).name %></h1>
+<h1>Dział: <%= Department.find(current_user.department_id).name %>
+<form name='departmentform' action='monthly'>
+<h1>Dział: <%= select_tag @dep, options_for_select([['TKE-1',1],['TKE-2',2],['TKE3',3]]), :onchange => "this.form.submit()" %> 
+</h1>
+</form>
+</h1>
 <table border="1" class="outertable">
 	<tr>
 		<th>nazwa</th>
@@ -12,7 +17,6 @@
 		<th colspan="3">zadania</th>
 	</tr>
 <% @DepartmentSum = 0 %>
-<%= @employees.count %>
 <% @employees.each do |employee| %>
 <% @asgnmts = employee.assignments.find(:all, :conditions => ["DATE(date) = ?", @mydate]) %>
 	<tr>
