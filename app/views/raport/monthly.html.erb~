@@ -6,7 +6,7 @@
 
 <h1>Dział: <%= Department.find(current_user.department_id).name %>
 <form name='departmentform' action='monthly'>
-<h1>Dział: <%= select_tag @dep, options_for_select([['TKE-1',1],['TKE-2',2],['TKE3',3]]), :onchange => "this.form.submit()" %> 
+<h1>Dział: <%= select_tag @dep, optionsfrom_collection_for_select(Department.all,"id","name"), :onchange => "this.form.submit()" %> 
 </h1>
 </form>
 </h1>
