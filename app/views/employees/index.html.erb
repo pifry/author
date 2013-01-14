@@ -14,7 +14,7 @@
   <tr>
 		<td><%= employee.name %></td>
     <td><%= employee.number %></td>
-    <td><%= employee.department %></td>
+    <td><%= Department.find(employee.department_id).name %></td>
     <td><%= link_to 'Pokaż', employee %></td>
     <td><%= link_to 'Edytuj', edit_employee_path(employee) %></td>
     <td><%= link_to 'Usuń', employee, method: :delete, data: { confirm: 'Czy jesteś pewien, że chcesz USUNĄĆ pracownika?' } %></td>

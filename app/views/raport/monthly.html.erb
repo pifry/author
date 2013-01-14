@@ -4,12 +4,10 @@
 </h1>
 </form>
 
-<h1>Dział: <%= Department.find(current_user.department_id).name %>
 <form name='departmentform' action='monthly'>
-<h1>Dział: <%= select_tag @dep, options_from_collection_for_select(Department.all,"id","name"), :onchange => "this.form.submit()" %> 
-</h1>
-</form>
-</h1>
+<h1>Dział: <%= select_tag "dep", options_from_collection_for_select(Department.all,"id","name", @dep), :onchange => "this.form.submit()" %> 
+</h1></form>
+
 <table border="1" class="outertable">
 	<tr>
 		<th>nazwa</th>

@@ -10,6 +10,6 @@ class RaportController < ApplicationController
 		else
 			@dep = params[:dep]
 		end
-		@employees = Employee.where("department_id = ?", current_user.department_id)
+		@employees = Employee.where("department_id = ?", @dep)
   end
 end
