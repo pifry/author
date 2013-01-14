@@ -12,7 +12,7 @@
 
 <p>
   <b>Dział:</b>
-  <%= @employee.department %>
+  <%= Department.find(@employee.department_id).name %>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
