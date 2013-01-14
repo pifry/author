@@ -11,7 +11,4 @@ Department.create(name: "TKE-2")
 Department.create(name: "TKM")
 Department.create(name: "TKO")
 
-Project.create(name: "Urlop", number: "0000")
-Project.create(name: "Choroba", number: "0000")
-Project.create(name: "Szkolenie", number: "0000")
-Project.create(name: "Inne", number: "0000")
+

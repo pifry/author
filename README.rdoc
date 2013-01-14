@@ -4,6 +4,9 @@ ok - Lista wybierania działu w podsumowaniu miesięcznym
 - Dodać datę rozpoczęcia i zakończenia pracy
 ok - dodać wybór nazwy działu podczas zakładania konta
 - dodawanie nowego projektu w locie
+- wymagać uwierzytelniania na liście projektów, dodawaniu działów, sprawdzić gdzie jeszcze
+- dodać "zalogowany jako"
+- dodać podsumowanie miesięczne pracowników i podsumowanie miesięczne projektów
 
 
 
