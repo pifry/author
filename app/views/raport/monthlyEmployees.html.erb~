@@ -4,7 +4,7 @@
 </h1>
 </form>
 
-<form name='departmentform' action='monthlyEmployees'>
+<form name='departmentform' action='monthly'>
 <h1>Dział: <%= select_tag "dep", options_from_collection_for_select(Department.all,"id","name", @dep), :onchange => "this.form.submit()" %> 
 </h1></form>
 

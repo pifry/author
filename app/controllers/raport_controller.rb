@@ -25,5 +25,6 @@ class RaportController < ApplicationController
 			@dep = params[:dep]
 		end
 		@employees = Employee.where("department_id = ?", @dep)
+		#@projects = Project.
 	end
 end

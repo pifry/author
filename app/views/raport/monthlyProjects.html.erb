@@ -1,10 +1,10 @@
-<form name='dateform' action='monthly'>
+<form name='dateform' action='monthlyProjects'>
 <h1>Zestawienie miesięczne 
 <%= select_date @mydate, {:discard_day => true }, :onchange => "this.form.submit()" %>
 </h1>
 </form>
 
-<form name='departmentform' action='monthly'>
+<form name='departmentform' action='monthlyProjects'>
 <h1>Dział: <%= select_tag "dep", options_from_collection_for_select(Department.all,"id","name", @dep), :onchange => "this.form.submit()" %> 
 </h1></form>
 

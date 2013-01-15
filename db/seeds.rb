@@ -11,7 +11,29 @@ Department.create(name: "TKE-2")
 Department.create(name: "TKM")
 Department.create(name: "TKO")
 
+i=0
+5.times do
+	i+=1
+	Department.create(name: "Dep"+i.to_s)
+end 
+
 Project.create(name: "Urlop", number: "0000")
 Project.create(name: "Choroba", number: "0000")
 Project.create(name: "Szkolenie", number: "0000")
 Project.create(name: "Inne", number: "0000")
+
+i=0
+10.times do
+	i+=1
+	Project.create(name: "Project"+i.to_s, number: (i*i*i).to_s)
+end 
+
+i=0
+10.times do
+	i+=1
+	while Department.exists?(i.modulo(Department.all.count)) == false do  
+		i+=1 
+	end
+	Employee.create(name: "Employee"+i.to_s, number: i, department_id: i.modulo(Department.all.count))
+end
+
