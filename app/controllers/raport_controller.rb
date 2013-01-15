@@ -25,6 +25,7 @@ class RaportController < ApplicationController
 			@dep = params[:dep]
 		end
 		@employees = Employee.where("department_id = ?", @dep)
-		#@projects = Project.
+		#@projects = Project.joins(:employees).where(:employees => {:department_id => @dep})
+		@projects = Project.find(:all, :conditions=>["employees.department_id = ?", @dep], :include=>:employees)
 	end
 end
