@@ -1,5 +1,6 @@
 Author::Application.routes.draw do
-  get "raport/monthly"
+  get "raport/monthlyProjects"
+	get "raport/monthlyEmployees"
 
   resources :departments
 
@@ -9,7 +10,7 @@ Author::Application.routes.draw do
  	devise_for :users
   resources :employees
   resources :projects
-	match '/monthly', to: 'employees#monthly'
+	#match '/monthly', to: 'employees#monthly'
 	match '/welcome', to: 'static_pages#welcome'
 	
 

@@ -1,6 +1,7 @@
 	<% if user_signed_in? %>
 		<li><%= link_to "Projekty", projects_path %></li>
 		<li><%= link_to "Pracownicy", employees_path %></li>
-		<li><%= link_to "Podsumowanie miesięczne", 'raport/monthly' %></li>
+		<li><%= link_to "Podsumowanie miesięczne pracowników", '/raport/monthly' %></li>
+		<li><%= link_to "Podsumowanie miesięczne projektów", '/raport/monthly' %></li>
 	<% end %>
 
