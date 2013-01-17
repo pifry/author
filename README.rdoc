@@ -9,6 +9,7 @@ ok - dodać wybór nazwy działu podczas zakładania konta
 ok - dodać podsumowanie miesięczne pracowników i podsumowanie miesięczne projektów
 ok - jak w bazie brakuje działu o id które ma jakiś pracownik to pojawia się problem na liście pracowników
 - naprawić obliczanie rzeczywistego czasu pracy działu
+- problem z dodawaniem wykonawców do projektów
 
 
 

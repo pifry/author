@@ -49,8 +49,8 @@
 		<%= content_tag :th, @lp, :rowspan => @asgnmts.count+3 %>
 		<%= content_tag :th, project.name, :rowspan => @asgnmts.count+3 %>
 		<%= content_tag :th, project.number, :rowspan => @asgnmts.count+3 %>
-		<th>Nazwa</th>
-		<th>Pracochłonność<br>w godz.</th>
+		<th></th>
+		<th></th>
 		<th></th>
 	</tr>
 <% @EmployeeSum = 0 %>
@@ -58,7 +58,7 @@
 	<tr>
 		<td><%= Employee.find(asgn.employee_id).name %></td>
 		<td><%= asgn.ManHour %></td>
-		<td><%= link_to 'Zmień', edit_assignment_path(asgn, :employee_id => project.id) %></td>
+		<td><%= link_to 'Zmień', edit_assignment_path(asgn, :project_id => project.id) %></td>
 	</tr>
 <% @EmployeeSum += asgn.ManHour.to_i %>
 <% end %>
@@ -68,7 +68,7 @@
 		<th></th>
 	</tr>
 	<tr>
-		<th colspan="3"><%= link_to 'dodaj zadanie', new_assignment_path(:employee_id => project.id) %></th>
+		<th colspan="3"><%= link_to 'dodaj wykonawcę', new_assignment_path(:project_id => project.id) %></th>
 	</tr>
 <% @DepartmentSum += @EmployeeSum %>
 <% end %>

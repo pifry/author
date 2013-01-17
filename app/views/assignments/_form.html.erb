@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+	<% if params[:employee_id]!=nil then %>
 	<div class="field">
     <%= f.label "Pracownik:" + Employee.find(params[:employee_id]).name %><br />
   </div>
@@ -31,4 +32,27 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+	<% end %>
+	<% if params[:project_id]!=nil then %>
+	<div class="field">
+    <%= f.select "employee_id", Employee.all.collect {|e| [e.name, e.id]}, {:prompt => 'Wykonawca'} %>
+  </div>
+  <div class="field">
+    <%= f.label "Data:" %><br />
+    <%= f.date_select :date, discard_day: :true %>
+  </div>
+	<div class="field">
+    <%= f.hidden_field :employee_id %>
+  </div>
+	<div class="field">
+    <%= f.label "Projekt:", Project.find(params[:project_id]).name %>
+  </div>
+	<div class="field">
+    <%= f.label "Pracochłonność:" %><br />
+    <%= f.number_field :ManHour %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+	<% end %>
 <% end %>

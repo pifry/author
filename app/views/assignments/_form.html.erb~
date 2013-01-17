@@ -25,7 +25,7 @@
     <%= f.select "project_id", Project.all.collect {|p| [p.name, p.id]}, {:prompt => 'Nazwa projektu'} %>
   </div>
 	<div class="field">
-    <%= f.label "Pracochłonność_w_godz.:" %><br />
+    <%= f.label "Pracochłonność:" %><br />
     <%= f.number_field :ManHour %>
   </div>
   <div class="actions">

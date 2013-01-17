@@ -19,17 +19,17 @@
 	<tr>
 		<th>2</th>
 		<th>Nominalny czas pracy pracownika</th>
-		<th>184</th>
+		<th><%= @nominalemplworktime %></th>
 	</tr>
 	<tr>
 		<th>3</th>
 		<th>Nominalny czas pracy działu</th>
-		<th><%= @employees.count * 184 %></th>
+		<th><%= @nominaldeptworktime %></th>
 	</tr>
 	<tr>
 		<th>4</th>
 		<th>Rzeczywisty czas pracy działu</th>
-		<th><%= @employees.count * 184 %></th>
+		<th><%= @realdepworktime %></th>
 	</tr>
 	<tr>
 		<th>l.p.</th>
@@ -58,7 +58,7 @@
 	<tr>
 		<td><%= Employee.find(asgn.employee_id).name %></td>
 		<td><%= asgn.ManHour %></td>
-		<td><%= link_to 'Zmień', edit_assignment_path(asgn, :employee_id => project.id) %></td>
+		<td><%= link_to 'Zmień', edit_assignment_path(asgn, :project_id => project.id) %></td>
 	</tr>
 <% @EmployeeSum += asgn.ManHour.to_i %>
 <% end %>
@@ -68,7 +68,7 @@
 		<th></th>
 	</tr>
 	<tr>
-		<th colspan="3"><%= link_to 'dodaj zadanie', new_assignment_path(:employee_id => project.id) %></th>
+		<th colspan="3"><%= link_to 'dodaj wykonawcę', new_assignment_path(:project_id => project.id) %></th>
 	</tr>
 <% @DepartmentSum += @EmployeeSum %>
 <% end %>
