@@ -6,10 +6,10 @@ ok - dodać wybór nazwy działu podczas zakładania konta
 - dodawanie nowego projektu w locie
 ok - wymagać uwierzytelniania na liście projektów, dodawaniu działów
 - sprawdzić gdzie jeszcze należy wymagać uwierzytelniania
-- dodać "zalogowany jako"
+ok - dodać "zalogowany jako"
 ok - dodać podsumowanie miesięczne pracowników i podsumowanie miesięczne projektów
 ok - jak w bazie brakuje działu o id które ma jakiś pracownik to pojawia się problem na liście pracowników
-- naprawić obliczanie rzeczywistego czasu pracy działu
+ok - naprawić obliczanie rzeczywistego czasu pracy działu
 - problem z dodawaniem wykonawców do projektów
 - dadać widok karty do podpisu pracownika
 - dodać przycisk nowy projekt w podsumowaniu miesięcznym projektów

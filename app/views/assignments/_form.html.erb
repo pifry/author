@@ -42,7 +42,7 @@
     <%= f.date_select :date, discard_day: :true %>
   </div>
 	<div class="field">
-    <%= f.hidden_field :employee_id %>
+    <%= f.hidden_field :project_id %>
   </div>
 	<div class="field">
     <%= f.label "Projekt:", Project.find(params[:project_id]).name %>
