@@ -4,7 +4,7 @@ ok - Lista wybierania działu w podsumowaniu miesięcznym
 - Dodać datę rozpoczęcia i zakończenia pracy
 ok - dodać wybór nazwy działu podczas zakładania konta
 - dodawanie nowego projektu w locie
-- wymagać uwierzytelniania na liście projektów, dodawaniu działów
+ok - wymagać uwierzytelniania na liście projektów, dodawaniu działów
 - sprawdzić gdzie jeszcze należy wymagać uwierzytelniania
 - dodać "zalogowany jako"
 ok - dodać podsumowanie miesięczne pracowników i podsumowanie miesięczne projektów
@@ -12,6 +12,7 @@ ok - jak w bazie brakuje działu o id które ma jakiś pracownik to pojawia się
 - naprawić obliczanie rzeczywistego czasu pracy działu
 - problem z dodawaniem wykonawców do projektów
 - dadać widok karty do podpisu pracownika
+- dodać przycisk nowy projekt w podsumowaniu miesięcznym projektów
 
 
 

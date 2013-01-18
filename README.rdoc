@@ -12,6 +12,8 @@ ok - jak w bazie brakuje działu o id które ma jakiś pracownik to pojawia się
 - naprawić obliczanie rzeczywistego czasu pracy działu
 - problem z dodawaniem wykonawców do projektów
 - dadać widok karty do podpisu pracownika
+- dodać przycisk nowy projekt w podsumowaniu miesięcznym projektów
+- dodać możliwość edycji swoich danych
 
 
 
