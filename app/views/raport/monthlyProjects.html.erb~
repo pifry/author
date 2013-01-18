@@ -7,7 +7,7 @@
 	</tr>
 	<tr>
 		<th rowspan="5">dział</th>
-		<th rowspan="5"><form name='departmentform' action='monthlyProjects'><%= select_tag "dep", options_from_collection_for_select(Department.all,"id","name", @dep), :onchange => "this.form.submit()" %></th>
+		<th rowspan="5"><form name='departmentanddateform' action='monthlyProjects'><%= select_tag "dep", options_from_collection_for_select(Department.all,"id","name", @dep), :onchange => "this.form.submit()" %></th>
 		<th colspan="2">Za miesiąc</th>
 		<th><%= select_date @mydate, {:discard_day => true }, :onchange => "this.form.submit()" %></form></th>
 	</tr>
@@ -68,7 +68,7 @@
 		<th></th>
 	</tr>
 	<tr>
-		<th colspan="3"><%= link_to 'dodaj wykonawcę', new_assignment_path(:project_id => project.id) %></th>
+		<th colspan="3"><%= link_to 'dodaj wykonawcę', new_assignment_path(:project_id => project.id, :source => "projects") %></th>
 	</tr>
 <% @DepartmentSum += @EmployeeSum %>
 <% end %>

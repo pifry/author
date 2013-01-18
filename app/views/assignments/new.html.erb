@@ -2,4 +2,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Cofnij', '/raport/monthly' %>
+<% if params[:source] == "employees" then%>
+<%= link_to 'Cofnij', '/raport/monthlyEmployees' %>
+<% else %>
+<%= link_to 'Cofnij', '/raport/monthlyProjects' %>
+<% end %>

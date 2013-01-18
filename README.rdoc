@@ -3,18 +3,23 @@ ok - Lista wybierania działu w podsumowaniu miesięcznym
 - Na liście powinni być uwzględniani pracownicy którzy w danym czasie pracowali
 - Dodać datę rozpoczęcia i zakończenia pracy
 ok - dodać wybór nazwy działu podczas zakładania konta
-- dodawanie nowego projektu w locie
+- dodawanie nowego projektu w locie (na liście projektów powinna pojawić się opcja "nowy projekt")
 ok - wymagać uwierzytelniania na liście projektów, dodawaniu działów
 - sprawdzić gdzie jeszcze należy wymagać uwierzytelniania
 ok - dodać "zalogowany jako"
 ok - dodać podsumowanie miesięczne pracowników i podsumowanie miesięczne projektów
 ok - jak w bazie brakuje działu o id które ma jakiś pracownik to pojawia się problem na liście pracowników
 ok - naprawić obliczanie rzeczywistego czasu pracy działu
-- problem z dodawaniem wykonawców do projektów
+ok - problem z dodawaniem wykonawców do projektów
 - dadać widok karty do podpisu pracownika
+- dodać przycisk pokaż kartę i pokaż wszystkie karty dla działu
 - dodać przycisk nowy projekt w podsumowaniu miesięcznym projektów
 - dodać możliwość edycji swoich danych
-- dodać pole 'pozostało godzin' na liście projektów i/lub przy dodawaniu
+- dodać pole 'pozostało godzin' na liście projektów i/lub przy dodawaniu wykonawców
+- dodać przycisk delegacja w new assignment (możliwość dodawania delegacji związanych z projektem)
+- zastanowić się nad stronami na podsumowaniach
+- zablokować możliwość tworzenia nowych kont
+- usunąć przypominanie hasła
 
 
 

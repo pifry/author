@@ -1,5 +1,5 @@
-<h1>Przyporządkuj zadanie</h1>
+<h1>Przyporządkuj zadanie/wkonawcę</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Cofnij', '/raport/monthly' %>
+<%= link_to 'Cofnij', '/raport/monthlyEmployees' %>

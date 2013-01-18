@@ -39,7 +39,7 @@
 		<th></th>
 	</tr>
 	<tr>
-		<th colspan="3"><%= link_to 'dodaj zadanie', new_assignment_path(:employee_id => employee.id) %></th>
+		<th colspan="3"><%= link_to 'dodaj zadanie', new_assignment_path(:employee_id => employee.id, :source => "employees") %></th>
 	</tr>
 <% @DepartmentSum += @EmployeeSum %>
 <% end %>
