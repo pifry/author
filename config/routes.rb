@@ -6,7 +6,7 @@ Author::Application.routes.draw do
 
 
   resources :assignments
-	root :to => 'static_pages#welcome' 
+	root :to => 'raport#monthlyProjects'
  	devise_for :users
   resources :employees
   resources :projects
