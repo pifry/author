@@ -1,4 +1,5 @@
 class RaportController < ApplicationController
+	before_filter :authenticate_user!
   def monthlyEmployees
 		if params[:date] == nil
 			@mydate = Date.current.beginning_of_month
