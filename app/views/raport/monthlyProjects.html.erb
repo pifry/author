@@ -56,7 +56,11 @@
 <% @EmployeeSum = 0 %>
 <% @asgnmts.each do |asgn| %>
 	<tr>
+		<% if Employee.exists?(asgn.employee_id) then%>
 		<td><%= Employee.find(asgn.employee_id).name %></td>
+		<% else %>
+		<td>N/A</td>
+		<% end %>
 		<td><%= asgn.ManHour %></td>
 		<td><%= link_to 'Zmień', edit_assignment_path(asgn, :project_id => project.id) %></td>
 	</tr>
