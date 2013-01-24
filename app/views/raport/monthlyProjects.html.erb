@@ -56,8 +56,8 @@
 <% @EmployeeSum = 0 %>
 <% @asgnmts.each do |asgn| %>
 	<tr>
-		<% if Employee.exists?(asgn.employee_id) then%>
-		<td><%= Employee.find(asgn.employee_id).name %></td>
+		<% if @employees.exists?(asgn.employee_id) then%>
+		<td><%= @employees.find(asgn.employee_id).name %></td>
 		<% else %>
 		<td>N/A</td>
 		<% end %>
